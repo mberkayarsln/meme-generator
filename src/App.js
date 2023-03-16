@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "./components/Header";
 import Meme from "./components/Meme";
+import Footer from "./components/Footer";
 
 const App = () => {
 
@@ -9,6 +10,7 @@ const App = () => {
         <div>
           <Header/>
           <Meme/>
+          <Footer/>
         </div>
       )
 

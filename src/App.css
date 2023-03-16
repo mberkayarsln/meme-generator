@@ -1,38 +1,265 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #78bcc4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7444e;
+  padding: 15px 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-title {
+  color: #f7f8f3;
+}
+
+.header-span {
+  color: #f7f8f3;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+
+.input-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 0 100px;
+  height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.text-input-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.text-input {
+  padding: 12px 24px;
+  width: 300px;
+  margin: 0 20px;
+  outline: none;
+  border: 2px solid #002c3e;
+  border-radius: 10px;
+  transition: 0.6s ease;
+  font-size: 1.2em;
+  color: #002c3e;
+}
+
+.text-input::placeholder {
+  color: #002c3e;
+  transition: 0.6s ease;
+}
+
+.text-input:hover {
+  background: #002c3e;
+  color: #f7f8f3;
+}
+
+.text-input:hover::placeholder {
+  color: #f7f8f3;
+}
+
+.text-input:focus {
+  border: 2px solid #f7f8f3;
+  background: #002c3e;
+  color: #f7f8f3;
+}
+
+.text-input:focus::placeholder {
+  color: #f7f8f3;
+}
+
+.file-input {
+  padding: 12px 24px;
+  width: 300px;
+  margin: 0 20px;
+  outline: none;
+  border: 2px solid #002c3e;
+  border-radius: 10px;
+  transition: 0.6s ease;
+  font-size: 1.2em;
+  color: #002c3e;
+}
+
+.button-input-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-input {
+  padding: 10px 16px;
+  width: 300px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin: 0 20px;
+  font-size: 1.1em;
+  background: #356d65;
+  color: #f7f8f3;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.button-input:hover {
+  background: #356d6490;
+}
+
+
+
+.meme-section {
+  position: relative;
+  width: 450px;
+  margin: auto;
+  margin-top: 30px;
+  height: 450px;
+}
+
+.meme-image {
+  width: 450px;
+  height: 450px;
+}
+
+.top-text {
+  top: 0;
+}
+
+.bottom-text {
+  bottom: 0;
+}
+
+.text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #f7f8f3;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+@media(max-width:1000px) {
+  .text-input {
+    width: 230px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .file-input {
+    width: 230px;
+  }
+}
+
+@media(max-width:780px) {
+  .header-title {
+    margin: auto;
+  }
+
+  .header-span {
+    display: none;
+  }
+
+  .text-input {
+    width: 200px;
+    font-size: 1.1em;
+  }
+
+  .file-input {
+    width: 200px;
+    font-size: 1.1em;
+  }
+
+  .button-input {
+    width: 210px;
+    font-size: 1em;
+  }
+
+  .meme-section {
+    width: 400px;
+    height: 400px;
+  }
+
+  .meme-image {
+    width: 400px;
+    height: 400px;
+  }
+
+}
+
+@media (max-width:700px) {
+  .text-input-div {
+    flex-direction: column;
+  }
+
+  .button-input-div {
+    flex-direction: column;
+  }
+
+  .text-input {
+    width: 400px;
+    margin: 10px 0;
+  }
+
+  .file-input {
+    width: 400px;
+    margin: 10px 0;
+  }
+
+  .button-input {
+    width: 400px;
+    margin: 10px 0;
+  }
+}
+
+@media(max-width:440px){
+  .header-section{
+    padding: 15px 0;
+  }
+  .text-input {
+    width: 300px;
+  }
+
+  .file-input {
+    width: 300px;
+  }
+
+  .button-input {
+    width: 300px;
+  }
+
+  .meme-section {
+    width: 300px;
+    height: 300px;
+  }
+
+  .meme-image {
+    width: 300px;
+    height: 300px;
   }
 }

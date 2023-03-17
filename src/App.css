@@ -15,6 +15,7 @@ body {
   align-items: center;
   background: #f7444e;
   padding: 15px 100px;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 .header-title {
@@ -51,20 +52,19 @@ body {
   width: 300px;
   margin: 0 20px;
   outline: none;
-  border: 2px solid #002c3e;
   border-radius: 10px;
   transition: 0.6s ease;
   font-size: 1.2em;
-  color: #002c3e;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .text-input::placeholder {
-  color: #002c3e;
   transition: 0.6s ease;
 }
 
 .text-input:hover {
-  background: #002c3e;
+  background: #2EE59D;
   color: #f7f8f3;
 }
 
@@ -73,9 +73,9 @@ body {
 }
 
 .text-input:focus {
-  border: 2px solid #f7f8f3;
-  background: #002c3e;
+  background: #2EE59D;
   color: #f7f8f3;
+  transform: translateY(-8px);
 }
 
 .text-input:focus::placeholder {
@@ -87,11 +87,35 @@ body {
   width: 300px;
   margin: 0 20px;
   outline: none;
-  border: 2px solid #002c3e;
   border-radius: 10px;
   transition: 0.6s ease;
   font-size: 1.2em;
-  color: #002c3e;
+  color: gray;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.file-input::placeholder {
+  transition: 0.6s ease;
+}
+
+.file-input:hover {
+  background: #2EE59D;
+  color: #f7f8f3;
+}
+
+.file-input:hover::placeholder {
+  color: #f7f8f3;
+}
+
+.file-input:focus {
+  background: #2EE59D;
+  color: #f7f8f3;
+  transform: translateY(-8px);
+}
+
+.file-input:focus::placeholder {
+  color: #f7f8f3;
 }
 
 .button-input-div {
@@ -102,7 +126,7 @@ body {
 
 .button-input {
   padding: 10px 16px;
-  width: 300px;
+  width: 250px;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -112,10 +136,14 @@ body {
   color: #f7f8f3;
   transition: 0.6s ease;
   cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .button-input:hover {
-  background: #4e7dff90;
+  background-color: #2EE59D;
+  color:#fff;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
 }
 
 .meme-section {
